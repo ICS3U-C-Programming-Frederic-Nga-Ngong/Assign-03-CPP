@@ -20,9 +20,9 @@ int main() {
     std::cin >>  c_str;
 
     try {
-        a = std::stoi(a_str);
-        b = std::stoi(b_str);
-        c = std::stoi(c_str);
+        a = std::stof(a_str);
+        b = std::stof(b_str);
+        c = std::stof(c_str);
 
             std::cout << "Is this your equation\n";
             std::cout << a << "x^2 + " << b << "x + " << c << " =0\n";
@@ -30,8 +30,8 @@ int main() {
             if (choice == "yes") {
             discriminant = pow(b, 2) - (4 * a * c);
             if (discriminant > 0 && b == 0 && c < 0) {
-                x = sqrt(1 * (c / a));
-                y = sqrt(1 * (c / a));
+                x = sqrt(-1 * (c / a));
+                y = sqrt(-1 * (c / a));
                 std::cout << "\nthe answers to your equation are " << x <<
                              " and " << y;
             } else if (discriminant > 0) {
@@ -53,10 +53,9 @@ int main() {
             } else {
                 std::cout << "\nEnter only yes or no";
             }
-    std::cout << "\nThanks for using the code";
 } catch (std::invalid_argument) {
     std::cout << "one of your number is not an integer"
                  "Please, enter new ones";
 }
-std::cout << "Thanks for using the code";
+std::cout << "\nThanks for using the code";
 }
