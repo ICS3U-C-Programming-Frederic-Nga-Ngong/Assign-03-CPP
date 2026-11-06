@@ -23,7 +23,10 @@ int main() {
         a = std::stof(a_str);
         b = std::stof(b_str);
         c = std::stof(c_str);
-
+        if (a == 0) {
+            std::cout << "a cannot be zero. "
+                         "Please, enter a new value";
+            } else {
             std::cout << "Is this your equation\n";
             std::cout << a << "x^2 + " << b << "x + " << c << " =0\n";
             std::cin >> choice;
@@ -53,6 +56,7 @@ int main() {
             } else {
                 std::cout << "\nEnter only yes or no";
             }
+}
 } catch (std::invalid_argument) {
     std::cout << "one of your number is not an integer"
                  "Please, enter new ones";
