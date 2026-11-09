@@ -2,7 +2,7 @@
 // .
 // Created by: Fred
 // Date: Feb 18 2008
-// Tell the user if he can date my grandchild or not.
+// Solves quadratic equations.
 
 #include<iostream>
 #include<cmath>
@@ -12,9 +12,9 @@ int main() {
     float a, b, c, x, y, discriminant;
     std::string a_str, b_str, c_str, choice;
 
-    std::cout<<"Hi Mr.user"
-    "Hope you are doing fine"
-    "This code is used to solve quadratic equation";
+    std::cout << "Hi Mr.user\n"
+                 "Hope you are doing fine\n"
+                 "This code is used to solve quadratic equation\n";
 
     // Get the values of a,b and c to th user
     std::cout << "Enter the value of a\n";
@@ -47,8 +47,8 @@ int main() {
             if (discriminant > 0 && b == 0 && c < 0) {
                 x = sqrt(-1 * (c / a));
                 y = sqrt(-1 * (c / a));
-                std::cout << "\nthe answers to your equation are " << x <<
-                             " and " << y;
+                std::cout << "\nthe answers to your equation are +" << x <<
+                             " and -" << y;
             } else if (discriminant > 0) {
                 x = (-b + sqrt(discriminant)) / (2 * a);
                 y = (-b - sqrt(discriminant)) / (2 * a);
